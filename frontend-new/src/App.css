@@ -1,0 +1,313 @@
+/* GLOBAL PAGE STYLE
+body {
+  background: #eef2f7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ MAIN CONTAINER 
+.main-container {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+}
+
+ HEADINGS 
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+ CARD BOXES
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+}
+
+INPUT FIELDS 
+input {
+  width: 95%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #4b7bec;
+  box-shadow: 0 0 4px #4b7bec;
+}
+
+ BUTTONS 
+button {
+  padding: 10px 18px;
+  background: #4b7bec;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #3867d6;
+}
+
+ STUDENT LIST SECTION 
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background: #f4f6f7;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+VIEW FEE BUTTON SMALL 
+li button {
+  padding: 6px 12px;
+  background: #20bf6b;
+}
+
+li button:hover {
+  background: #0fb96c;
+}
+
+ FEE RECEIPTS BOX *
+.receipts-box {
+  background: #e6ffe6;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.15);
+}
+
+ LINKS 
+a {
+  text-decoration: none;
+  color: #0c78ec;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  margin: 4px 0;
+  font-size: 14px;
+} */
+
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN CONTAINER (light & dark modes) */
+.main-container {
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* LIGHT MODE */
+.main-container.light {
+  /* 👉 Put your background image in public/bg.jpg */
+  /* and it will automatically be used here 
+  background: #e5edf8 url("/bg.jpg") no-repeat center top fixed;*/
+  background-size: cover;
+  color: #1f2933;
+}
+
+/* DARK MODE */
+.main-container.dark {
+  background: #020617;
+  color: #f9fafb;
+}
+
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.top-bar h1 {
+  margin: 0 0 10px 0;
+}
+
+/* BUTTONS */
+.top-actions {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.mode-btn,
+.logout-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Light/Dark buttons */
+.mode-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.mode-btn:hover {
+  background: #1d4ed8;
+}
+
+.logout-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+  justify-content: space-between;
+  text-align: center;
+}
+
+.main-container.dark .card {
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* HEADINGS */
+h1 {
+  color: inherit;
+}
+
+h2 {
+  margin-top: 0;
+  color: inherit;
+}
+
+/* INPUT FIELDS */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #b0b8c4;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.5);
+}
+
+.main-container.dark input {
+  background: #0f172a;
+  color: #e5e7eb;
+  border-color: #475569;
+}
+
+/* GENERIC BUTTONS INSIDE CARDS */
+button {
+  padding: 9px 16px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* row for upload/view buttons */
+.button-row {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* LIST STYLES */
+.doc-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.doc-list li {
+  background: #eef2ff;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container.dark .doc-list li {
+  background: #1f2937;
+}
+
+.doc-list a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.doc-list a:hover {
+  text-decoration: underline;
+}
+
+/* NO DATA TEXT */
+.no-data {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ERROR TEXT */
+.error {
+  color: #dc2626;
+  margin: 4px 0;
+  font-size: 14px;
+}
